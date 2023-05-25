@@ -2,8 +2,8 @@
 #include <string>
 using namespace std;
 
-class Node { 
-public :
+class Node {
+public:
 	int noMhs;
 	string name;
 	Node* next;
@@ -42,4 +42,29 @@ void DoubleLinkedList::addNode() {
 	newNode->noMhs = nim;
 	newNode->name = nm;
 
+	if (START == NULL || nim <= START->noMhs) {
+		if (START != NULL && nim == START->noMhs) {
+			cout << "\nDuplicate number not allowed" << endl;
+			return;
+		}
+		newNode->next = START;
+		if (START != NULL);
+		START->prev = newNode;
+		newNode->prev = NULL;
+		START = newNode;
+		   return;
+	}
+
+	Node* current = START;
+	while (current->next != NULL && nim == current->next->noMhs)
+		current = current->next;
+	
+	if (current->next != NULL && nim == current->next->noMhs) {
+		cout << "\nDuplicate roll numbers not allowed" << endl;
+		return;
+	}
+
+	
+		
+	
 }
