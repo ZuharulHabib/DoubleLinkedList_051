@@ -2,6 +2,6 @@
 #include <string>
 using namespace std;
 
-class note {
+class note { 
 
 };
