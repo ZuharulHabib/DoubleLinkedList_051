@@ -181,7 +181,7 @@ int main() {
 			switch (ch) {
 			case '1':
 					obj.addNode();
-					break;
+					break; 
 			case '2':
 				obj.hapus();
 				break;
